@@ -71,6 +71,11 @@ public class IngresoSistema extends javax.swing.JFrame {
         });
 
         btnsalir.setText("Salir");
+        btnsalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                terminarAplicacion(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/admin2.JPG"))); // NOI18N
         jLabel3.setText("jLabel3");
@@ -90,7 +95,7 @@ public class IngresoSistema extends javax.swing.JFrame {
                     .addComponent(txtcontra, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(106, 106, 106)
@@ -138,8 +143,8 @@ public class IngresoSistema extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-395)/2, (screenSize.height-224)/2, 395, 224);
+        setSize(new java.awt.Dimension(395, 224));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
 private void btnaceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaceptarActionPerformed
@@ -168,6 +173,12 @@ private void txtusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 // TODO add your handling code here:
     txtusuario.requestFocus();
 }//GEN-LAST:event_txtusuarioActionPerformed
+
+    private void terminarAplicacion(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarAplicacion
+        // TODO add your handling code here:
+        this.dispose();
+        System.exit(0);
+    }//GEN-LAST:event_terminarAplicacion
 
     /**
      * @param args the command line arguments
